@@ -61,7 +61,7 @@ if(!connectionRequest){
 connectionRequest.status=status;
 await connectionRequest.save();
 
-res.json({message:"Connection request reviewed successfully!", connectionRequest.status})
+res.json({message:"Connection request reviewed successfully!", connectionRequest})
     }
     catch(err){
         res.status(500).send("something went wrong"+err.message)
